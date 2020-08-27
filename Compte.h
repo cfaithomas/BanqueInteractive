@@ -18,6 +18,7 @@ public:
     void retrait(const float valeur);
     float getSolde();
     void afficherSolde();
+    void virer(const int montant,Compte &destinataire);
 
 };
 
