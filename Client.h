@@ -12,11 +12,14 @@ using namespace std;
 class Client {
 private:
     string nom;
-    Compte compte;
-public:
+    Compte compte[100];
+    int nbcomptes;
+    public:
+    Client(string nom_du_client);
     float getSolde();
     string getNom();
     void afficherSolde();
+    void ajoutercompte();
 };
 
 

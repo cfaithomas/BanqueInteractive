@@ -13,6 +13,7 @@ private:
     float solde;
 
 public:
+    Compte();
     Compte(const int numero);
     void depot(const float valeur);
     void retrait(const float valeur);

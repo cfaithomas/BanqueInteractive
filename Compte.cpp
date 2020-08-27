@@ -6,6 +6,8 @@
 #include <iomanip>
 #include "Compte.h"
 using namespace std;
+
+
 Compte::Compte(const int numero):numero(numero) {
 solde=0;
 }
@@ -29,4 +31,8 @@ void Compte::afficherSolde() {
 void Compte::virer(const int montant, Compte &destinataire) {
     retrait(montant);
     destinataire.depot(montant);
+}
+
+Compte::Compte() {
+
 }
