@@ -16,10 +16,12 @@ nbclients++;
 }
 
 void Banque::bilanClient(const int numeroclient) {
-client[numeroclient].afficherSolde();
+    std::cout<<"******************Bilan du client "<<client[numeroclient].getNom()<<" ***********************************"<<std::endl;
+    client[numeroclient].afficherSolde();
 }
 
 void Banque::bilangeneral() {
+std::cout<<"****************************Bilan général***********************************"<<std::endl;
 for(int i=0;i<nbclients;i++)
 {
     bilanClient(i);
