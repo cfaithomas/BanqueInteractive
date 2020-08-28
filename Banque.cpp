@@ -44,11 +44,11 @@ void Banque::interaction() {
     switch (saisie)
     {
         case 1:
-            ajouterClient(this->saisieClient());
+            ajouterClient(saisieClient());
             break;
 
         case 2:
-            this->opclient(this->choix("client",nbclients));
+            opclient(choix("client",nbclients));
             break;
 
         case 3:
