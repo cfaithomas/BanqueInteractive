@@ -15,11 +15,14 @@ private:
     Compte compte[100];
     int nbcomptes;
     public:
+    Client();
     Client(string nom_du_client);
     float getSolde();
     string getNom();
     void afficherSolde();
     void ajoutercompte();
+
+    Compte *getCompte();
 };
 
 

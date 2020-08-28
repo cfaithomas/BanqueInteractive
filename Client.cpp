@@ -5,8 +5,8 @@
 #include "Client.h"
 
 float Client::getSolde() {
-    float total;
-    for(int i;i<nbcomptes;i++)
+    float total=0;
+    for(int i=0;i<nbcomptes;i++)
     {
         total+=compte[i].getSolde();
     }
@@ -30,6 +30,14 @@ nbcomptes=0;
 }
 
 void Client::ajoutercompte() {
-compte[nbcomptes]=Compte(nbcomptes); //à la case nbcomptes j'affecte un nouveau dont le numéro est nbcomptes
+compte[nbcomptes]=Compte(nbcomptes); //à la case nbcomptes j'affecte un nouveau compte dont le numéro est nbcomptes
 nbcomptes++;
+}
+
+Client::Client() {
+
+}
+
+Compte *Client::getCompte() {
+    return compte;
 }
