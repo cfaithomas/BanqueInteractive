@@ -63,8 +63,7 @@ void Banque::interaction() {
 }
 
 string Banque::saisieClient() {
-    cin.ignore(256, '\n');
-
+    cin.ignore(256, '\n'); //ignore les précédents cin pour le bon fonctionnement du getline
     string saisie="";
     cout<<"Veuillez saisir un nom\n";
     getline(cin,saisie);
@@ -119,8 +118,10 @@ int Banque::choix(string type,int limit) {
     int saisie=0;
     cout<<"****************Liste des "<<type<<"s disponibles*******************"<<endl;
     for(int i=0;i<limit;i++)
-    {
+    {   if(type=="client")
         cout<<i<<")"<<client[i].getNom()<<endl;
+        else
+            cout<<i<<")"<<endl;
     }
     cout<<"*****************************************************************"<<endl;
     cout<<"Veuillez choisir un "<<type<<endl;
