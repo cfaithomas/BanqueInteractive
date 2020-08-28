@@ -10,15 +10,15 @@
 
 class Banque {
 private:
-    Client client[100];
-    int nbclients;
+    vector<Client> client;
+
 public:
     Banque();
     void ajouterClient(const string nom_du_client);
     void bilanClient(const int numeroclient);
     void bilangeneral();
 
-    Client *getClient();
+     vector<Client> &getClient() ;
 
     float choixMontant(); //saisie de tous les montants renvoi du montant saisi
 

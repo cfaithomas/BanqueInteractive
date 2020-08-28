@@ -7,7 +7,7 @@
 
 float Client::getSolde() {
     float total=0;
-    for(int i=0;i<nbcomptes;i++)
+    for(int i=0;i<compte.size();i++)
     {
         total+=compte[i].getSolde();
     }
@@ -19,7 +19,7 @@ string Client::getNom() {
 }
 
 void Client::afficherSolde() {
-    for(int i=0;i<nbcomptes;i++)
+    for(int i=0;i<compte.size();i++)
     {
         compte[i].afficherSolde();
     }
@@ -27,23 +27,23 @@ void Client::afficherSolde() {
 }
 
 Client::Client(string nom_du_client): nom(nom_du_client) {
-nbcomptes=0;
+
 }
 
 void Client::ajoutercompte() {
-compte[nbcomptes]=Compte(nbcomptes); //à la case nbcomptes j'affecte un nouveau compte dont le numéro est nbcomptes
-nbcomptes++;
-std:cout<<"le compte "<<nbcomptes<<" a été ajouté"<<std::endl;
+compte.push_back(Compte(compte.size())); //à la case nbcomptes j'affecte un nouveau compte dont le numéro est nbcomptes
+
+std:cout<<"le compte "<<compte.size()<<" a été ajouté"<<std::endl;
 }
 
 Client::Client() {
 
 }
 
-Compte *Client::getCompte() {
+ vector<Compte> &Client::getCompte()  {
     return compte;
 }
 
-int Client::getNbcomptes() const {
-    return nbcomptes;
-}
+
+
+

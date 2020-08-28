@@ -6,14 +6,15 @@
 #define TP2_CLIENT_H
 
 #include <string>
+#include <vector>
 #include "Compte.h"
 
 using namespace std;
 class Client {
 private:
     string nom;
-    Compte compte[100];
-    int nbcomptes;
+    vector<Compte> compte;
+
     public:
     Client();
     Client(string nom_du_client);
@@ -22,9 +23,10 @@ private:
     void afficherSolde();
     void ajoutercompte();
 
-    int getNbcomptes() const;
 
-    Compte *getCompte();
+
+    vector<Compte> &getCompte();
+
 };
 
 
