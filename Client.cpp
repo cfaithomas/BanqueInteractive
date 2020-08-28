@@ -2,6 +2,7 @@
 // Created by eric on 27/08/2020.
 //
 
+#include <iostream>
 #include "Client.h"
 
 float Client::getSolde() {
@@ -32,6 +33,7 @@ nbcomptes=0;
 void Client::ajoutercompte() {
 compte[nbcomptes]=Compte(nbcomptes); //à la case nbcomptes j'affecte un nouveau compte dont le numéro est nbcomptes
 nbcomptes++;
+std:cout<<"le compte "<<nbcomptes<<" a été ajouté"<<std::endl;
 }
 
 Client::Client() {
@@ -40,4 +42,8 @@ Client::Client() {
 
 Compte *Client::getCompte() {
     return compte;
+}
+
+int Client::getNbcomptes() const {
+    return nbcomptes;
 }

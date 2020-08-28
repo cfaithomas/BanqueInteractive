@@ -22,6 +22,8 @@ private:
     void afficherSolde();
     void ajoutercompte();
 
+    int getNbcomptes() const;
+
     Compte *getCompte();
 };
 
